@@ -1,0 +1,319 @@
+// Variables
+$primary-color: #3858D6;
+$secondary-color: #000;
+$text-color: #fff;
+$background-color: #1E1E1E;
+$card-background: #F6F6F6;
+$font-family: 'Arial', sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Base Styles
+body {
+    font-family: $font-family;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Header
+header {
+    @include flex-between;
+    padding: 20px 0;
+    background-color: $background-color;
+    color: $text-color;
+
+    .logo a {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+            margin-left: 30px;
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .header-icons a {
+        color: $text-color;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+}
+
+// Hero Section
+.hero {
+    @include flex-between;
+    background-color: $background-color;
+    color: $text-color;
+    padding: 80px 40px;
+
+    .hero-text {
+        max-width: 50%;
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            display: flex;
+
+            input {
+                padding: 15px;
+                border: none;
+                border-radius: 5px 0 0 5px;
+                width: 70%;
+            }
+
+            button {
+                padding: 15px 20px;
+                border: none;
+                background-color: $primary-color;
+                color: $text-color;
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .hero-image img {
+        max-width: 400px;
+    }
+}
+
+// Brands Section
+.brands {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 0;
+    background-color: #fff;
+
+    .brand-card {
+        @include flex-center;
+        background-color: $card-background;
+        padding: 20px;
+        border-radius: 10px;
+        width: 30%;
+        gap: 15px;
+
+        img {
+            max-width: 80px;
+        }
+
+        .brand-info h3 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+// Latest Products Section
+.latest-products {
+    text-align: center;
+    padding: 60px 0;
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .product-card {
+        background-color: $card-background;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+
+        img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .rating {
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+
+            .original-price {
+                text-decoration: line-through;
+                color: #999;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .view-more {
+        padding: 15px 30px;
+        background-color: $primary-color;
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
+
+// Testimonials Section
+.testimonials {
+    text-align: center;
+    padding: 60px 0;
+    background-color: $card-background;
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .testimonial-cards {
+        @include flex-center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        width: 40%;
+        display: flex;
+        gap: 20px;
+        text-align: left;
+        opacity: 0.5;
+        transition: all 0.3s ease;
+
+        &.active {
+            opacity: 1;
+            border: 2px solid $primary-color;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .testimonial-text h3 {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .slider-dots {
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+
+            &.active {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+// Newsletter Section
+.newsletter {
+    @include flex-between;
+    padding: 80px 40px;
+    background-color: #fff;
+
+    .newsletter-content {
+        max-width: 50%;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .subscribe-form {
+            display: flex;
+
+            input {
+                padding: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px 0 0 5px;
+                width: 60%;
+            }
+
+            button {
+                padding: 15px 20px;
+                border: none;
+                background-color: $primary-color;
+                color: $text-color;
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .newsletter-image img {
+        max-width: 250px;
+    }
+}
+
+// Footer
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: $background-color;
+    color: $text-color;
+}
