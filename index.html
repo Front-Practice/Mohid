@@ -3,148 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Shop</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mohid - Smart Watches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <a href="#">Motive</a>
-            </div>
-            <nav>
-                <ul>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="#">
+                        <img src="./assets/logo.png" alt="Mohid Logo Icon">
+                        <span>Mohid</span>
+                    </a>
+                </div>
+                <ul class="navbar__collection">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Brands</a></li>
+                    <li class="dropdown"><a href="#">Brands</a></li>
                     <li><a href="#">Recent Products</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
+                <div class="navbar__icons">
+                    <a href="#"><img src="./assets/search.png" alt="Search"></a>
+                    <a href="#"><img src="./assets/user_image.png" alt="User"></a>
+                    <a href="#" class="cart-link"><img src="./assets/cart.png" alt="Cart"></a>
+                </div>
             </nav>
-            <div class="header-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </header        <main>
-            <section class="hero">
-                <div class="hero-text">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
                     <h1>Discover Most Suitable Watches</h1>
-                    <p>Find the best, reliable, and cheap smart watches here. We focus on product quality. Here you can find smart watches of almost all brands. So why you are waiting? Just order now!</p>
-                    <div class="search-bar">
+                    <p>Find the best, latest, and cool smartwatches here. We provide a wide range of products from various brands to help you find the perfect smartwatch for your style.</p>
+                    <form class="hero__form">
                         <input type="text" placeholder="Find the best brands">
-                        <button>Search</button>
-                    </div>
+                        <button type="submit">Search</button>
+                    </form>
                 </div>
-                <div class="hero-image">
-                    <img src="https://i.ibb.co/9v2s5qY/watch-hero.png" alt="Smartwatch">
+                <div class="hero__image">
+                    <img src="./assets/hero_image.png" alt="Gold smartwatch with a beige strap">
                 </div>
-            </section            <section class="brands">
+            </div>
+        </section>
+
+        <section class="brands">
+            <div class="container brands__container">
                 <div class="brand-card">
-                    <img src="https://i.ibb.co/F8t9kmD/apple-logo.png" alt="Apple Watch">
-                    <div class="brand-info">
-                        <h3>Apple</h3>
-                        <p>Apple is one of the most famous smart watches providing company.</p>
-                    </div>
-                </div>
-                <div class="brand-card">
-                    <img src="https://i.ibb.co/mHBF8y1/xiaomi-logo.png" alt="Xiaomi Watch">
-                    <div class="brand-info">
-                        <h3>Xiaomi</h3>
-                        <p>Xiaomi smart watches are produced by MI company.</p>
-                    </div>
+                    <img src="./assets/mini_watch.png" alt="Apple Watch">
+                    <h3>Apple</h3>
+                    <p>Apple is one of the most famous and leading smartwatch manufacturing companies.</p>
                 </div>
                 <div class="brand-card">
-                    <img src="https://i.ibb.co/nQk24jB/fitbit-logo.png" alt="Fitbit Watch">
-                    <div class="brand-info">
-                        <h3>FitBit</h3>
-                        <p>FitBit smart watches are best for their health related features.</p>
-                    </div>
+                    <img src="./assets/mini_watch.png" alt="Xiaomi Watch">
+                    <h3>Xiaomi</h3>
+                    <p>Xiaomi smartwatches are known for their quality and affordability.</p>
                 </div>
-            </section            <section class="latest-products">
+                <div class="brand-card">
+                    <img src="./assets/mini_watch.png" alt="Fitbit Watch">
+                    <h3>FitBit</h3>
+                    <p>FitBit smartwatches are famous for their health and fitness features.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-products">
+            <div class="container">
                 <h2>Our Latest Products</h2>
                 <div class="product-grid">
                     <div class="product-card">
-                        <img src="https://i.ibb.co/F8t9kmD/apple-logo.png" alt="Apple Smart I">
+                        <img src="./assets/watch.png" alt="Apple Smart I">
                         <h3>Apple Smart I</h3>
                         <div class="rating">★★★★★</div>
-                        <p class="price"><span class="original-price">$300.00</span> $255.00</p>
+                        <p class="price"><s>$300.00</s> $255.00</p>
                     </div>
                     <div class="product-card">
-                        <img src="https://i.ibb.co/mHBF8y1/xiaomi-logo.png" alt="Apple Smart II">
+                        <img src="./assets/watch.png" alt="Apple Smart II">
                         <h3>Apple Smart II</h3>
                         <div class="rating">★★★★★</div>
-                        <p class="price"><span class="original-price">$300.00</span> $255.00</p>
+                        <p class="price"><s>$300.00</s> $295.00</p>
                     </div>
                     <div class="product-card">
-                        <img src="https://i.ibb.co/nQk24jB/fitbit-logo.png" alt="Apple Smart III">
+                        <img src="./assets/watch.png" alt="Apple Smart III">
                         <h3>Apple Smart III</h3>
                         <div class="rating">★★★★★</div>
-                        <p class="price"><span class="original-price">$300.00</span> $255.00</p>
+                        <p class="price"><s>$300.00</s> $265.00</p>
                     </div>
                     <div class="product-card">
-                        <img src="https://i.ibb.co/L8y2zWd/apple-smart-iv.png" alt="Apple Smart IV">
+                        <img src="./assets/watch.png" alt="Apple Smart IV">
                         <h3>Apple Smart IV</h3>
                         <div class="rating">★★★★★</div>
-                        <p class="price"><span class="original-price">$400.00</span> $399.00</p>
+                        <p class="price"><s>$400.00</s> $395.00</p>
                     </div>
                     <div class="product-card">
-                        <img src="https://i.ibb.co/tYHk4Wq/samsung-watch-pro.png" alt="Samsung Watch Pro">
+                        <img src="./assets/watch.png" alt="Samsung Watch Pro">
                         <h3>Samsung Watch Pro</h3>
                         <div class="rating">★★★★★</div>
-                        <p class="price"><span class="original-price">$300.00</span> $255.00</p>
+                        <p class="price"><s>$300.00</s> $295.00</p>
                     </div>
                     <div class="product-card">
-                        <img src="https://i.ibb.co/K2G1G0F/fitbit-max-i.png" alt="Fitbit Max I">
-                        <h3>Fitbit Max I</h3>
+                        <img src="./assets/watch.png" alt="Fitbit Max 1">
+                        <h3>Fitbit Max 1</h3>
                         <div class="rating">★★★★★</div>
-                        <p class="price">$155.00</p>
+                        <p class="price">$195.00</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="./assets/watch.png" alt="Fitbit Max 1">
+                        <h3>Fitbit Max 1</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">$195.00</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="./assets/watch.png" alt="Fitbit Max 1">
+                        <h3>Fitbit Max 1</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">$195.00</p>
                     </div>
                 </div>
                 <button class="view-more">View More</button>
-            </section            <section class="testimonials">
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
                 <h2>What People Say About Us</h2>
-                <div class="testimonial-cards">
+                <div class="testimonial-container">
                     <div class="testimonial-card">
-                        <img src="https://i.ibb.co/8D1mpCq/hamza-faizi.png" alt="Hamza Faizi">
-                        <div class="testimonial-text">
-                            <h3>Hamza Faizi</h3>
-                            <p>"Don't waste time, just order! This is the best website to puschase smart watches."</p>
-                            <div class="rating">★★★★★</div>
-                        </div>
+                        <img src="./assets/man_1.jpg" alt="Herman Faldi">
+                        <h4>Herman Faldi</h4>
+                        <p>"Don't experience, just order. This is the best website to buy a watch for your loved ones."</p>
+                        <div class="rating">★★★★★</div>
                     </div>
-                    <div class="testimonial-card active">
-                        <img src="https://i.ibb.co/hZJgGpH/hafiz-huzaifa.png" alt="Hafiz Huzaifa">
-                        <div class="testimonial-text">
-                            <h3>Hafiz Huzaifa</h3>
-                            <p>"I've been purchasing smart watches of Mohive for a long time. All the products are good quality."</p>
-                            <div class="rating">★★★★★</div>
-                        </div>
+                    <div class="testimonial-card">
+                        <img src="./assets/man_2.jpg" alt="Hafiz Huzaila">
+                        <h4>Hafiz Huzaila</h4>
+                        <p>"I ordered a smartwatch for my young sister. It arrived quickly and in good quality."</p>
+                        <div class="rating">★★★★★</div>
                     </div>
                 </div>
                 <div class="slider-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
+                    <span></span>
+                    <span></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </section            <section class="newsletter">
-                <div class="newsletter-content">
-                    <h2>Subscribe To Newsletter</h2>
-                    <p>Get free guide about smart watches daily.</p>
-                    <div class="subscribe-form">
-                        <input type="email" placeholder="Enter Email Address">
-                        <button>Subscribe</button>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-box">
+                    <div class="newsletter-content">
+                        <h2>Subscribe To Newsletter</h2>
+                        <p>Get fresh information about new products and sales.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="newsletter-image">
+                        <img src="./assets/watch.png" alt="Black smartwatch">
                     </div>
                 </div>
-                <div class="newsletter-image">
-                    <img src="https://i.ibb.co/8m0b2yC/newsletter-watch.png" alt="Smartwatch">
-                </div>
-            </section>
-        </main        <footer>
-            <p>Copyright @ 2025 Motive</p>
-        </footer>
-    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright © 2022 | Mohid</p>
+        </div>
+    </footer>
+
 </body>
 </html>
